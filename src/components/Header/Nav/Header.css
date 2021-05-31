@@ -1,0 +1,48 @@
+.containerHeader {
+    width: 100%;
+    background-color: white;
+    height: 8vh;
+    border-color: black;
+    border-bottom: 2px solid rgb(77, 77, 77);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.body {
+    margin: none;
+}
+
+ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    list-style: none;
+}
+
+.Header {
+    margin-right: 10rem;
+    text-align: center;
+    font-weight: 10rem;
+}
+
+.logo {
+    font-style: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav {
+    display: flex;
+    margin-right: 10rem;
+    justify-content: flex-end;
+    list-style: none;
+    align-items: center;
+}
+
+.nav li {
+    margin-right: 30px;
+    display: flex;
+}
