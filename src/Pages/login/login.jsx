@@ -9,7 +9,9 @@ export class login extends Component {
                 <input className="xChange-Login__Username"></input>
               
                <span>Password: </span>
-                <input className="xChange-Login__Password"></input>        
+                <input className="xChange-Login__Password"></input>       
+                <button>Login</button>
+                <p>Forget password?</p> 
             </div>
         )
     }

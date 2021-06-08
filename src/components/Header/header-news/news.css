@@ -1,16 +1,14 @@
 .NewsTitle {
     width: 100%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     height: 3.9vh;
     border-color: black;
-    border-bottom: 2px solid rgb(77, 77, 77);
-    border-left: 2px solid rgb(77, 77, 77);
-    border-right: 2px solid rgb(77, 77, 77);
-    border-radius: 2px;
+    border-bottom: 1px solid rgb(77, 77, 77);
+    border-radius: 1px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    position: relative;
+    z-index: 1;
 }
 
 .header-service-shipping__Wrapper span {
@@ -60,4 +58,29 @@ li {
 .Header-tools-tools li {
     margin-right: 30px;
     display: flex;
+}
+
+.btn {
+    margin-left: 10px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.btn-primary {
+    background-color: rgb(253, 253, 253);
+}
+
+.btn-Basecolor {
+    width: 100px;
+    background-color: rgb(255, 150, 101);
+}
+
+.btn:hover {
+    background-color: rgb(200, 224, 245);
+}
+
+.badge {
+    font-size: 20px;
 }

@@ -3,11 +3,12 @@
     background-color: white;
     height: 8vh;
     border-color: black;
-    border-bottom: 2px solid rgb(77, 77, 77);
+    border-bottom: 1px solid rgb(3, 3, 3);
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    position: relative;
+    position: fixed;
+    z-index: 1;
 }
 
 .body {
@@ -23,6 +24,14 @@ ul {
     list-style: none;
 }
 
+.link {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .Header {
     margin-right: 10rem;
     text-align: center;
@@ -30,8 +39,12 @@ ul {
 }
 
 .logo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     font-style: normal;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .nav {
@@ -40,6 +53,18 @@ ul {
     justify-content: flex-end;
     list-style: none;
     align-items: center;
+}
+
+.Container-space {
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    border-radius: 5px;
 }
 
 .nav li {

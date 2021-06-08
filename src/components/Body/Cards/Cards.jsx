@@ -1,26 +1,30 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './cards.css';
 
-export class Cards extends Component {
-  
-    render() {
+function Cards({setToggleState,username}){
+        
+    const onButtonClick=(mode)=>{
+        setToggleState(mode);
+    }
         return (
                 <div className="cardContainer">
                     <div className="cardInsider">
                         <div className="cardImage">
-                            <img></img>
+                            {/* <img src=""></img> */}
                         </div>
                         <div className="CardNameHolder">
                             <p>In Offer</p>
+
+                           <h4  >{username}</h4>
                            <h4>Product name</h4>
-                           <h4>Product name</h4>
-                           <span>&#8377; 1,200</span>
+                           <button onClick={()=>onButtonClick(true)}>Trade</button>
+                           <button>Buy</button>
                         </div> 
                     </div>
                 </div>
 
         )
     }
-}
+
 
 export default Cards

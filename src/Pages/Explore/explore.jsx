@@ -1,30 +1,51 @@
-import React, { Component } from 'react'
-import Cards from '../../components/Body/Cards/Cards'
+import React, { useState ,useEffect} from 'react';
+import Axios from "axios";
+import Cards from '../../components/Body/Cards/Cards';
+import News from '../../components/Header/header-news/news';
+import Headerr from '../../components/Header/Nav/Header';
 
-export class Explore extends Component {
+function Explore()  {
+    const [toggleState, setToggleState] = useState(false);
+    const [dbCheck, GetDbCheck] = useState([]);
 
-    render() {
-        const animals =[
-        {id:1, animal:"Dog"},
-        {id:2, animal:"Dog"},
-        {id:3, animal:"Dog"},
-        {id:4, animal:"Dog"},]
-        return (
+    useEffect(() => {
+        Axios.get('http://localhost:4000/product').then((Response)=>{
+            async function getData(){
+                GetDbCheck(Response.data);
+            }  
+            getData();
+        })
+    }, [])
+
+      return (
+        <div className="App">
+            <div className="headerComponents">
+                <News></News>
+                <Headerr toggleState={toggleState} setToggleState={setToggleState}></Headerr>
+            </div>
+           
             <div className="container">
-                 <div className="LabelCaption">
+                <div className="LabelCaption">
+                    <div className="BillBoard">
+                        <button/>
+                    </div>
+                   
                     <div className="cardHolder">
-                        {animals.map(item => (
-                            <Cards></Cards>
-                        ))}
+                        {/* <Cards setToggleState={setToggleState}> </Cards>
+                        <Cards setToggleState={setToggleState}> </Cards>
+                        <Cards setToggleState={setToggleState}> </Cards>
+                        <Cards setToggleState={setToggleState}> </Cards>
+                         */}
                         
-                        {animals.map(item => (
-                            <Cards></Cards>
-                        ))}
+                       {dbCheck.map((val)=>{
+                            return(<Cards setToggleState={setToggleState} username={val.username}></Cards>)  
+                        })}  
                     </div>
                 </div>
             </div>
+             
+        </div> 
         )
     }
-}
 
 export default Explore

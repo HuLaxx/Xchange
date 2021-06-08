@@ -11,28 +11,45 @@ body {
     align-items: center;
     justify-content: center;
     align-content: center;
-    margin-right: 1%;
-    margin-left: 1%;
+    margin-right: 0.1%;
+    margin-left: 0.1%;
+    position: relative;
 }
 
 .container {
-    display: flex;
-    flex: 1;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 4%;
+    position: relative;
+    background-color: rgb(245, 245, 245);
 }
 
 .LabelCaption {
     width: 100%;
-    position: relative;
     align-items: center;
     justify-content: center;
     align-content: center;
 }
 
+.headerComponents {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    margin: 0;
+    top: 0;
+    height: 10vh;
+}
+
+.BillBoard {
+    height: 10vh;
+    width: 100%;
+    background-color: aliceblue;
+}
+
 .cardHolder {
-    display: table-cell;
-    vertical-align: middle;
     margin: 1%;
     width: 98%;
     display: flex;
@@ -40,3 +57,39 @@ body {
     align-content: space-around;
     border-radius: 5px;
 }
+
+.Panel_open:hover .service-trade-panel {
+    width: 20%;
+}
+
+body {
+    /* Hide scrollbars */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+}
+
+::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(112, 128, 144, 0.959);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #000000;
+}
+
+body {
+    scrollbar-face-color: rgba(156, 183, 211, 0.959);
+    scrollbar-track-color: rgba(54, 61, 69, 0.9795);
+}
+
+
+/*# sourceMappingURL=scroll_customizing.css.map */
