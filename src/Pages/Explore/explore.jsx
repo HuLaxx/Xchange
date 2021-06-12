@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from 'react';
+import React, {useState ,useEffect} from 'react';
 import Axios from "axios";
 import Cards from '../../components/Body/Cards/Cards';
 import News from '../../components/Header/header-news/news';
@@ -9,9 +9,10 @@ function Explore()  {
     const [dbCheck, GetDbCheck] = useState([]);
 
     useEffect(() => {
-        Axios.get('http://localhost:4000/product').then((Response)=>{
+        Axios.get('http://localhost:4000/Xc/product').then((Response)=>{
             async function getData(){
                 GetDbCheck(Response.data);
+                //console.log(Response.data);
             }  
             getData();
         })

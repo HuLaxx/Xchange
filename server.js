@@ -5,9 +5,9 @@ const mysql = require('mysql');
 
 const app = express();
 
-const SELECT_ALL_PRODUCT_QUERY = 'Select * From users';
-const INSERT_NEWUSER_QUERY = 'Insert into Users(Username,Password,ProfilePicture) Values(?,?,?)';
-
+const Q_SELECT_ALL_PRODUCT_QUERY = 'Select * From users';
+const Q_INSERT_NEWUSER = 'Insert into Users(username,password) Values(?,?,?)';
+const Q_SELECT_USERNAME = 'SELECT * FROM users WHERE username=? AND password=?';
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -22,22 +22,12 @@ connection.connect(err => {
 });
 
 app.use(cors());
+app.use(express.json());
 
+app.post('/Xc/registration', (req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
 
-app.post('/Api/newUser', (req, res) => {
-    const Username = req.body.username;
-    const Password = req.body.password;
-
-    connection.query(INSERT_NEWUSER_QUERY, [Username, Password], (err, value) => {
-
-    })
-})
-app.get('/', (req, res) => {
-    res.send('go to /product to seee products');
-})
-
-app.get('/product/add', (req, res) => {
-    const { username, password } = req.query;
     const INSER_USERNAME = 'INSERT INTO users(username,password) VALUES(?,?)';
     connection.query(INSER_USERNAME, [username, password], (err, result) => {
         if (err) {
@@ -47,9 +37,30 @@ app.get('/product/add', (req, res) => {
         }
     })
 })
+app.get('/', (req, res) => {
+    res.send('go to /product to seee products');
+})
 
-app.get('/Product', (req, res) => {
-    connection.query(SELECT_ALL_PRODUCT_QUERY, (err, result) => {
+app.post('/Xc/login', (req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
+    connection.query(Q_SELECT_USERNAME, [username, password], (err, result) => {
+        if (err) {
+            res.send({ error: err });
+            console.log(err);
+        }
+
+        if (result.length > 0) {
+            res.send(result);
+        } else {
+            res.send({ message: "Wrong username/password combination" });
+        }
+
+    })
+})
+
+app.get('/Xc/Product', (req, res) => {
+    connection.query(Q_SELECT_ALL_PRODUCT_QUERY, (err, result) => {
         if (err) {
             return res.send(err);
         } else {

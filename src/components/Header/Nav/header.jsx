@@ -17,6 +17,11 @@ export default function Header({toggleState,setToggleState}){
                                     </div>
                                 </li>
                         </ul>
+                        <ul className="SearchBar_container">
+                            <li>
+                                <input className="SearchBar"></input>
+                            </li>
+                        </ul>
                        
                         <ul className="nav link">
                             <Link to='/explore'>

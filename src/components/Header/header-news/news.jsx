@@ -257,7 +257,7 @@ export class news extends Component {
                     </ul>
 
                     <ul className="Header-tools-tools">
-                        <li><a href="/help">Lo</a></li> 
+                       
                             <Link to='/Notification'>
                                 <Button type="button" className="btn btn-primary">
                                         Notifications <span className="badge badge-light">0</span>

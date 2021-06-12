@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-
-export class UploadItem extends Component {
-
+export class Varible extends Component {
+   
     render() {
         return (
             <div>
@@ -11,4 +10,4 @@ export class UploadItem extends Component {
     }
 }
 
-export default UploadItem
+export default Varible

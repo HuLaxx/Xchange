@@ -71,3 +71,20 @@ a {
     margin-right: 30px;
     display: flex;
 }
+
+.SearchBar_container {
+    left: 10px;
+    justify-content: flex-start;
+    display: flex;
+    background-color: aqua;
+}
+
+.SearchBar {
+    left: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 30rem;
+    height: 2rem;
+}

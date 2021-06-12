@@ -8,7 +8,7 @@ import Error from './Pages/Error/error404';
 import './Pages/sidePanel/sidepanel.css';
 
 function App() {
-  
+
     return (
       <Router> 
         <Switch>        
