@@ -12,14 +12,14 @@ export default function Header({toggleState,setToggleState}){
                         <ul className="Header">
                                 <li>
                                     <div className="logo">
-                                        <span>Xchange</span>
+                                        <span className="website-name">Xchan<span>ge</span></span>
                                         <p>{toggleState}</p>
                                     </div>
                                 </li>
                         </ul>
                         <ul className="SearchBar_container">
                             <li>
-                                <input className="SearchBar"></input>
+                                <input className="SearchBar" placeholder="Search" ></input><button>S</button>
                             </li>
                         </ul>
                        

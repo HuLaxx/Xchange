@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import Login from './Pages/login/login';
-import Signup from './Pages/Signup/signup';
+import Login from './Pages/Authentication/login/login';
+import Signup from './Pages/Authentication/Signup/signup';
 import {BrowserRouter as Router, Redirect, Route,Switch} from 'react-router-dom';
 import Explore from './Pages/Explore/explore';
 import Error from './Pages/Error/error404';

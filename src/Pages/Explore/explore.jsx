@@ -7,7 +7,7 @@ import Headerr from '../../components/Header/Nav/Header';
 function Explore()  {
     const [toggleState, setToggleState] = useState(false);
     const [dbCheck, GetDbCheck] = useState([]);
-
+    
     useEffect(() => {
         Axios.get('http://localhost:4000/Xc/product').then((Response)=>{
             async function getData(){
@@ -28,16 +28,11 @@ function Explore()  {
             <div className="container">
                 <div className="LabelCaption">
                     <div className="BillBoard">
-                        <button/>
+                      
                     </div>
                    
                     <div className="cardHolder">
-                        {/* <Cards setToggleState={setToggleState}> </Cards>
-                        <Cards setToggleState={setToggleState}> </Cards>
-                        <Cards setToggleState={setToggleState}> </Cards>
-                        <Cards setToggleState={setToggleState}> </Cards>
-                         */}
-                        
+                     
                        {dbCheck.map((val)=>{
                             return(<Cards setToggleState={setToggleState} username={val.username}></Cards>)  
                         })}  
