@@ -2,7 +2,8 @@ import React, {useState ,useEffect} from 'react';
 import Axios from "axios";
 import Cards from '../../components/Body/Cards/Cards';
 import News from '../../components/Header/header-news/news';
-import Headerr from '../../components/Header/Nav/Header';
+import Header from '../../components/Header/Nav/Header';
+import UploadItem from '../Upload/uploadItem';
 
 function Explore()  {
     const [toggleState, setToggleState] = useState(false);
@@ -22,7 +23,7 @@ function Explore()  {
         <div className="App">
             <div className="headerComponents">
                 <News></News>
-                <Headerr toggleState={toggleState} setToggleState={setToggleState}></Headerr>
+                <Header toggleState={toggleState} setToggleState={setToggleState}></Header>
             </div>
            
             <div className="container">
@@ -39,7 +40,7 @@ function Explore()  {
                     </div>
                 </div>
             </div>
-             
+         
         </div> 
         )
     }
