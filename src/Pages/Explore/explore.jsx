@@ -1,5 +1,6 @@
 import React, {useState ,useEffect} from 'react';
 import Axios from "axios";
+import './explore.css'
 import Cards from '../../components/Body/Cards/Cards';
 import News from '../../components/Header/header-news/news';
 import Header from '../../components/Header/Nav/Header';

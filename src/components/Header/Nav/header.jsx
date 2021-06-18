@@ -71,6 +71,12 @@ export default function Header({toggleState,setToggleState}){
                                                 {dbCheck.map((val)=>{
                                                     return(<Cards setToggleState={setToggleState} username={val.username} PageBehaviour={false}></Cards>)  
                                                 })}  
+                                                 {dbCheck.map((val)=>{
+                                                    return(<Cards setToggleState={setToggleState} username={val.username} PageBehaviour={false}></Cards>)  
+                                                })}  
+                                                 {dbCheck.map((val)=>{
+                                                    return(<Cards setToggleState={setToggleState} username={val.username} PageBehaviour={false}></Cards>)  
+                                                })}  
                                                 
                                             </div>            
                                     </div>

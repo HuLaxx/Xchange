@@ -4,25 +4,28 @@
 
 body {
     background-color: #f1f1f1;
+    overflow-x: hidden;
 }
 
 .App {
     width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-right: 0.1%;
+    margin-left: 0.1%;
+    position: relative;
 }
 
 .container {
+    margin: auto;
     width: 100%;
     align-items: center;
     justify-content: center;
     align-content: center;
     position: relative;
     background-color: rgb(218, 218, 218);
-}
-
-.LabelCaption {
-    width: 100%;
-    justify-content: center;
-    align-content: center;
 }
 
 .headerComponents {
@@ -38,14 +41,6 @@ body {
     height: 10vh;
     width: 100%;
     background-color: aliceblue;
-}
-
-.cardHolder {
-    margin: 1%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
 }
 
 .Panel_open:hover .service-trade-panel {
