@@ -34,7 +34,7 @@ export default function Header({toggleState,setToggleState}){
                         </ul>
                         <ul className="SearchBar_container">
                             <li>
-                                <input className="SearchBar" placeholder="Search" ></input><button>S</button>
+                                {/* <input className="SearchBar" placeholder="Search" ></input><button>S</button> */}
                             </li>
                         </ul>
                        
@@ -49,9 +49,11 @@ export default function Header({toggleState,setToggleState}){
                                     <p>TRADE</p>
                                 </li>
                                 </Link>
-                                <li className="Panel_open">
-                                <button>Open Panel</button> 
-                                </li>
+                                <Link to='Profile'>
+                                    <li>
+                                        <p>PROFILE</p>
+                                    </li>
+                                </Link>
                             </ul>
                             
                             {/* Sidepanel have to fix this by CREATING A GLOBAL VARIABLE FOR SIDEBAR active and rest funtion which is created here */}
@@ -66,9 +68,10 @@ export default function Header({toggleState,setToggleState}){
                                         </div>
                                         <div className="service-trade-panel__container">
                                             <div className="Container-space">
-                                            {dbCheck.map((val)=>{
-                            return(<Cards setToggleState={setToggleState} username={val.username}></Cards>)  
-                        })}  
+                                                {dbCheck.map((val)=>{
+                                                    return(<Cards setToggleState={setToggleState} username={val.username} PageBehaviour={false}></Cards>)  
+                                                })}  
+                                                
                                             </div>            
                                     </div>
                             </div>

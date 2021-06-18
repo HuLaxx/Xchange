@@ -6,9 +6,8 @@
         height: 100%;
         left: 100%;
         transform: translateX(-100%);
-        background-color: #111;
+        background-color: rgb(219, 219, 219);
         opacity: 99%;
-        overflow-x: hidden;
         transition: 0.2s;
     }
     
@@ -58,9 +57,6 @@
         justify-content: center;
         align-content: center;
         height: 100%;
-        border-bottom: 1px solid rgb(0, 0, 0);
-        border-top: 1px solid rgb(0, 0, 0);
-        border-right: 1px solid rgb(0, 0, 0);
     }
     
     .service-trade-panel-Header li button {
@@ -69,7 +65,8 @@
     }
     
     .service-trade-panel__container {
-        width: 100%;
+        margin-left: 5%;
+        width: 90%;
         height: 90%;
         background-color: aquamarine;
     }

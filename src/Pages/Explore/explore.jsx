@@ -4,6 +4,7 @@ import Cards from '../../components/Body/Cards/Cards';
 import News from '../../components/Header/header-news/news';
 import Header from '../../components/Header/Nav/Header';
 import UploadItem from '../Upload/uploadItem';
+import uploadItem from '../Upload/uploadItem';
 
 function Explore()  {
     const [toggleState, setToggleState] = useState(false);
@@ -13,36 +14,49 @@ function Explore()  {
         Axios.get('http://localhost:4000/Xc/product').then((Response)=>{
             async function getData(){
                 GetDbCheck(Response.data);
-                //console.log(Response.data);
             }  
             getData();
         })
     }, [])
 
-      return (
-        <div className="App">
-            <div className="headerComponents">
-                <News></News>
-                <Header toggleState={toggleState} setToggleState={setToggleState}></Header>
-            </div>
-           
-            <div className="container">
-                <div className="LabelCaption">
-                    <div className="BillBoard">
-                      
+    {if(dbCheck.length > 0){
+        return (
+            <div className="App">
+                <div className="headerComponents">
+                    <News></News>
+                    <Header toggleState={toggleState} setToggleState={setToggleState}></Header>
+                </div>
+               
+                <div className="container">
+                    <div className="LabelCaption">
+                        <div className="leftadHolder"></div>
+                            {/* <div className="BillBoard">
+                                
+                            </div> */}
+    
+                       
+                        <div className="leftadHolder"></div> 
                     </div>
-                   
                     <div className="cardHolder">
-                     
-                       {dbCheck.map((val)=>{
-                            return(<Cards setToggleState={setToggleState} username={val.username}></Cards>)  
-                        })}  
-                    </div>
+                           {dbCheck.map((val)=>{
+                                return(<Cards PageBehaviour={true} setToggleState={setToggleState} username={val.username}></Cards>)  
+                            })}  
+                        </div>
+                </div>
+             {/* <UploadItem/> */}
+            </div> 
+            )
+        }else{
+            return(
+            <div className="App">
+                <div className="headerComponent">
+                   <p>Nothing on this page  </p> 
                 </div>
             </div>
-         
-        </div> 
-        )
+            )
+        }
+    }
+      
     }
 
 export default Explore

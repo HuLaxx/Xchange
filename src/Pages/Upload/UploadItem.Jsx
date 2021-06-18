@@ -13,7 +13,7 @@ function uploadItem() {
                     <div className="Item-upload-form">
                     <div className="Item-upload-Picture">
                                <div className="item-picture">
-
+                                    
                                </div>
                                 <input type="file"></input>
                             </div>

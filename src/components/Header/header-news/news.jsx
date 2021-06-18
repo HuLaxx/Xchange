@@ -273,8 +273,7 @@ export class news extends Component {
                                         signup 
                                 </Button>
                             </Link>
-                    </ul>
-                   
+                    </ul> 
                 </div>
            
         )

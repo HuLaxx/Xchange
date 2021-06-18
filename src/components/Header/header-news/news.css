@@ -9,6 +9,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     z-index: 1;
+    position: fixed;
 }
 
 .header-service-shipping__Wrapper span {
