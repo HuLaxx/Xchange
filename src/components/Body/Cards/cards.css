@@ -8,6 +8,10 @@
     position: relative;
 }
 
+.cardContainer:hover {
+    box-shadow: 0 0 11px rgba(17, 17, 17, 0.3);
+}
+
 .smallSize {
     width: 100px;
     height: 200px;
@@ -18,6 +22,7 @@
 .cardInsider {
     margin: auto;
     width: 100%;
+    border-radius: 3px;
     height: 100%;
     border: 1px solid black;
 }

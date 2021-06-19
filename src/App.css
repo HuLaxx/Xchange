@@ -1,5 +1,5 @@
 * {
-    cursor: cell;
+    margin: 0;
 }
 
 body {
@@ -18,23 +18,13 @@ body {
     position: relative;
 }
 
-.container {
-    margin: auto;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    position: relative;
-    background-color: rgb(218, 218, 218);
-}
-
 .headerComponents {
-    position: relative;
+    position: static;
     width: 100%;
     z-index: 1;
     margin: 0;
     top: 0;
-    height: 10vh;
+    height: 20vh;
 }
 
 .BillBoard {
@@ -78,3 +68,15 @@ body {
 
 
 /*# sourceMappingURL=scroll_customizing.css.map */
+
+.Footer {
+    height: 10rem;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    bottom: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    font-weight: bold;
+}

@@ -5,7 +5,7 @@ import Cards from '../../components/Body/Cards/Cards';
 import News from '../../components/Header/header-news/news';
 import Header from '../../components/Header/Nav/Header';
 import UploadItem from '../Upload/uploadItem';
-import uploadItem from '../Upload/uploadItem';
+
 
 function Explore()  {
     const [toggleState, setToggleState] = useState(false);
@@ -30,13 +30,18 @@ function Explore()  {
                
                 <div className="container">
                     <div className="LabelCaption">
-                        <div className="leftadHolder"></div>
+                        <div className="leftMenu">
+                            <div classnName="MenuItem_location"><p>Location</p></div>
+                            <ul className="LocationList">
+                                <li>Nagpur</li>
+                                <li>Wardha</li>
+                                <li>Pune</li> 
+                            </ul>
+                        </div>
+                         
                             {/* <div className="BillBoard">
-                                
+                            
                             </div> */}
-    
-                       
-                        <div className="leftadHolder"></div> 
                     </div>
                     <div className="cardHolder">
                            {dbCheck.map((val)=>{
@@ -45,6 +50,9 @@ function Explore()  {
                         </div>
                 </div>
              {/* <UploadItem/> */}
+             <div className="Footer">
+          Back to top
+        </div>
             </div> 
             )
         }else{
@@ -53,6 +61,9 @@ function Explore()  {
                 <div className="headerComponent">
                    <p>Nothing on this page  </p> 
                 </div>
+                <div className="Footer">
+          Back to top
+        </div>
             </div>
             )
         }

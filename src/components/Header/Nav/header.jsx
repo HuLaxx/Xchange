@@ -3,6 +3,7 @@ import Axios from "axios";
 import './Header.css';
 import {Link} from 'react-router-dom';
 import Cards from '../../Body/Cards/Cards';
+
 export default function Header({toggleState,setToggleState}){
     const [dbCheck, GetDbCheck] = useState([]);
     
@@ -39,7 +40,7 @@ export default function Header({toggleState,setToggleState}){
                         </ul>
                        
                         <ul className="nav link">
-                            <Link to='/explore'>
+                            <Link to='/'>
                             <li>
                                 <p>HOME</p>
                             </li>
@@ -49,7 +50,7 @@ export default function Header({toggleState,setToggleState}){
                                     <p>TRADE</p>
                                 </li>
                                 </Link>
-                                <Link to='Profile'>
+                                <Link to='/profile'>
                                     <li>
                                         <p>PROFILE</p>
                                     </li>
@@ -71,13 +72,7 @@ export default function Header({toggleState,setToggleState}){
                                                 {dbCheck.map((val)=>{
                                                     return(<Cards setToggleState={setToggleState} username={val.username} PageBehaviour={false}></Cards>)  
                                                 })}  
-                                                 {dbCheck.map((val)=>{
-                                                    return(<Cards setToggleState={setToggleState} username={val.username} PageBehaviour={false}></Cards>)  
-                                                })}  
-                                                 {dbCheck.map((val)=>{
-                                                    return(<Cards setToggleState={setToggleState} username={val.username} PageBehaviour={false}></Cards>)  
-                                                })}  
-                                                
+                                               
                                             </div>            
                                     </div>
                             </div>

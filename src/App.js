@@ -6,19 +6,33 @@ import {BrowserRouter as Router, Redirect, Route,Switch} from 'react-router-dom'
 import Explore from './Pages/Explore/explore';
 import Error from './Pages/Error/error404';
 import './Pages/sidePanel/sidepanel.css';
+import Profile from './Pages/Profile/Profile';
+import { useLocation } from 'react-router-dom'
 
 function App() {
-
+  //const location = useLocation();
     return (
-      <Router> 
-        <Switch>        
-          <Route exact path="/" component={Explore} />
-          <Route excat path="/Error404" component={Error} />
-          <Route path="/Login" component={Login} />
-          <Route path="/signup" component={Signup}/>
-          <Redirect to="/Error404" />
-        </Switch>
-       </Router>  
+      <div className="container">
+        <div className="header">
+
+        </div>
+        <div className="Brandname_header">
+        <Router> 
+          <Switch>        
+            <Route exact path="/" component={Explore} />
+            <Route excat path="/Error404" component={Error} />
+            <Route path="/Login" component={Login} />
+            <Route path="/signup" component={Signup}/>
+            <Route path='/profile' component={Profile} />
+            <Redirect to="/Error404" />
+          </Switch>
+       </Router>
+
+        </div>
+        {/* {console.log(location.pathname)} */}
+      
+      </div>
+        
     );
     
 }
