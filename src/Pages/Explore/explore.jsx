@@ -23,25 +23,24 @@ function Explore()  {
     {if(dbCheck.length > 0){
         return (
             <div className="App">
-                <div className="headerComponents">
+             
                     <News></News>
                     <Header toggleState={toggleState} setToggleState={setToggleState}></Header>
-                </div>
+                  
+               
                
                 <div className="container">
                     <div className="LabelCaption">
                         <div className="leftMenu">
-                            <div classnName="MenuItem_location"><p>Location</p></div>
-                            <ul className="LocationList">
-                                <li>Nagpur</li>
-                                <li>Wardha</li>
-                                <li>Pune</li> 
-                            </ul>
-                        </div>
-                         
-                            {/* <div className="BillBoard">
-                            
-                            </div> */}
+                            <div className="menuItem"><span className="sp">Location</span></div>
+                                <div className="leftMenu">
+                                    <ul className="LocationList">
+                                        <li>Nagpur</li>
+                                        <li>Wardha</li>
+                                        <li>Pune</li> 
+                                    </ul>
+                                </div>
+                            </div>
                     </div>
                     <div className="cardHolder">
                            {dbCheck.map((val)=>{
@@ -58,7 +57,7 @@ function Explore()  {
         }else{
             return(
             <div className="App">
-                <div className="headerComponent">
+                <div className="container">
                    <p>Nothing on this page  </p> 
                 </div>
                 <div className="Footer">

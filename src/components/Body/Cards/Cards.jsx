@@ -1,6 +1,6 @@
 import React from 'react'
 import './cards.css';
-
+import cover from './download.jpg';
 function Cards({PageBehaviour,setToggleState,username}){
     const Explore = PageBehaviour;
     const onButtonClick=(mode)=>{
@@ -11,11 +11,10 @@ function Cards({PageBehaviour,setToggleState,username}){
                 <div className="cardContainer">
                     <div className="cardInsider">
                         <div className="cardImage">
-                            {/* <img src=""></img> */}
+                            <img src={cover}></img>
                         </div>
                         <div className="CardNameHolder">
                             <p>In Offer</p>
-
                            <h4  >{username}</h4>
                            <h4>Product name</h4>
                            <button onClick={()=>onButtonClick(true)}>Trade</button>
@@ -23,7 +22,6 @@ function Cards({PageBehaviour,setToggleState,username}){
                         </div> 
                     </div>
                 </div>
-
         )
     }else{
         return (
@@ -34,7 +32,6 @@ function Cards({PageBehaviour,setToggleState,username}){
                     </div>
                     <div className="CardNameHolder">
                         <p>In Offer</p>
-
                        {/* <h4  >{username}</h4>
                        <h4>Product name</h4> */}
                        <button onClick={()=>onButtonClick(true)}>Trade</button>

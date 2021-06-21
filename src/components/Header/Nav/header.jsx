@@ -28,7 +28,7 @@ export default function Header({toggleState,setToggleState}){
                         <ul className="Header">
                                 <li>
                                     <div className="logo">
-                                        <span className="website-name">Xchan<span>ge</span></span>
+                                        <span className="website-name">Eunoia</span>
                                         <p>{toggleState}</p>
                                     </div>
                                 </li>
@@ -59,7 +59,7 @@ export default function Header({toggleState,setToggleState}){
                             
                             {/* Sidepanel have to fix this by CREATING A GLOBAL VARIABLE FOR SIDEBAR active and rest funtion which is created here */}
                              
-                            <div className={toggleState ? 'service-trade-panel active':'service-trade-panel'}>
+                                <div className={toggleState ? 'service-trade-panel active':'service-trade-panel'}>
                                     <div className="service-trade-panel-Header">
                                         <div className="logo" onClick={()=>onButtonClick(false)}>Back</div>
                                             <ul>
@@ -72,11 +72,11 @@ export default function Header({toggleState,setToggleState}){
                                                 {dbCheck.map((val)=>{
                                                     return(<Cards setToggleState={setToggleState} username={val.username} PageBehaviour={false}></Cards>)  
                                                 })}  
-                                               
+                                     
                                             </div>            
+                                        </div>
                                     </div>
-                            </div>
-            </div>
+                                </div>
        
         );       
 }

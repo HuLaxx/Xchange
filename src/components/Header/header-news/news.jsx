@@ -269,7 +269,7 @@ export class news extends Component {
                                 </Button>
                             </Link>
                             <Link to='/signup'>
-                                <Button type="button" className="btn btn-primary">
+                                <Button type="button" className="btn btn-Basecolor long">
                                         signup 
                                 </Button>
                             </Link>

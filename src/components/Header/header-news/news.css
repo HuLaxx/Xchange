@@ -46,7 +46,6 @@ li {
 
 .header-tool__helpService {
     margin-left: 30px;
-    font-size: small;
 }
 
 .Header-tools-tools {
@@ -66,7 +65,7 @@ li {
     margin-left: 10px;
     height: 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     width: 150px;
 }
 
@@ -77,6 +76,12 @@ li {
 .btn-Basecolor {
     width: 100px;
     background-color: rgb(255, 150, 101);
+    border: 1px solid black;
+}
+
+.long {
+    width: 150px;
+    background-color: rgba(210, 255, 128, 0.959);
 }
 
 .btn:hover {
@@ -84,5 +89,7 @@ li {
 }
 
 .badge {
-    font-size: 20px;
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: bold;
 }
