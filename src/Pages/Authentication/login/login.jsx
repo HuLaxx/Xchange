@@ -6,7 +6,7 @@ function Login(){
   const [password,SetPassowrd] = useState("");
 
   const LogindbFunction= ()=>{
-     Axios.post('http://localhost:4000/Xc/login',{
+     Axios.post('http://localhost:4000/login',{
        username: username,
        password: password,
      }).then((Response)=>{

@@ -12,7 +12,7 @@ import { useLocation } from 'react-router-dom'
 function App() {
   //const location = useLocation();
     return (
-      <div className="container">
+      <div className="Body-container">
         <div className="header">
 
         </div>

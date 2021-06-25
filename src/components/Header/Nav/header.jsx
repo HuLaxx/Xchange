@@ -10,8 +10,6 @@ export default function Header({toggleState,setToggleState}){
     const onButtonClick=(mode)=>{
         setToggleState(mode);
     }
-
-        
         useEffect(() => {
             Axios.get('http://localhost:4000/Xc/product').then((Response)=>{
                 async function getData(){

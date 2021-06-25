@@ -73,3 +73,5 @@ body {
     align-items: top;
     font-weight: bold;
 }
+
+@media only screen and (width:1000px) {}
