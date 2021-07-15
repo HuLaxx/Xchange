@@ -1,16 +1,17 @@
 .containerHeader {
     width: 100%;
-    background-color: white;
+    background-color: #131921;
+    color: #131921;
     height: 6vh;
     border-color: black;
     border-bottom: 1px solid rgb(3, 3, 3);
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
+    font-family: "Merriweather", "Georgia", serif;
     font-weight: bold;
 }
 
@@ -36,7 +37,7 @@ a {
 }
 
 .Header {
-    margin-left: 10%;
+    margin-left: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,20 +56,15 @@ a {
 }
 
 .website-name {
-    font-family: "Montserrat";
-    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    font-family: "Merriweather", "Georgia", serif;
+    color: #e9e9ea;
     background-size: cover;
-    color: transparent;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
     text-transform: uppercase;
     font-size: 40px;
-    line-height: .75;
+    line-height: .85;
 }
 
-.website-name {
-    background-color: slategray;
-}
+.website-name {}
 
 .website-name span {
     font-family: "Montserrat";
@@ -95,6 +91,7 @@ a {
 .nav li {
     margin-right: 30px;
     display: flex;
+    color: whitesmoke;
 }
 
 .SearchBar_container {

@@ -5,16 +5,15 @@ import {Link} from 'react-router-dom';
 import Cards from '../../Body/Cards/Cards';
 
 export default function Header({toggleState,setToggleState}){
-    const [dbCheck, GetDbCheck] = useState([]);
-    
-    const onButtonClick=(mode)=>{
-        setToggleState(mode);
-    }
+        const [dbCheck, GetDbCheck] = useState([]);
+        
+        const onButtonClick=(mode)=>{
+            setToggleState(mode);
+        }
         useEffect(() => {
             Axios.get('http://localhost:4000/Xc/product').then((Response)=>{
                 async function getData(){
                     GetDbCheck(Response.data);
-                    //console.log(Response.data);
                 }  
                 getData();
             })

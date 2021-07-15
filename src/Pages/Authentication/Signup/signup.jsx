@@ -21,44 +21,45 @@ function Signup() {
      })
   }
         return (
-            <div className="signup-body">
-            
-              <div className="c2">
-                <div class="signup-header">Create Account</div>
-                  <div class="signup-content">
-                    <ul class="login_type">
-                      <li><a href="#"><i class="fab fa-google">  <FontAwesomeIcon icon="coffee" /></i></a></li>
-                      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    </ul>
-                  </div>
-                  <div className="signup-box">
-                        <input className="xChange-Login__Username"
-                        type="text"
-                        placeholder="Username*" 
-                        onChange={(e)=>{
-                            SetUsernameReg(e.target.value);
-                        }} />
-                      
-                        <input type="email"
-                        className="xChange_signup_Email"
-                          type="Email"
-                          placeholder="Email*" 
-                          onChange={(e)=>{
-                            //setEmailRegistration(e.target.value)
-                          }}></input>
-                    
-                        <input className="xChange-Login__Password"
-                        type="password"
-                        placeholder="Password*" 
-                        onChange={(e)=>{
-                          SetPasswordReg(e.target.value);
-                        }} />       
-                        <button onClick={register} className="btn">Sign up</button>
-                        <p><a href="/Service/Password">Forget password?</a></p>
-                  </div>    
-              </div>           
+           <div className="SignupContainer">
+                 <div className="nameHolder">
+              <p><a href="/">ConnectPage</a></p>
             </div>
+            <div className="xChange-login">
+              <div className="AuthButtons">
+                <p>Join to ConnectPage</p>
+                <button>Continue with facebook</button>
+                <button>Continue with Google</button>
+                <button>Continue with Email</button>
+              </div>
+              <div className="formContainer">
+                <form>
+                    <p>Email address</p>
+                    <input className="xChange-Login__Username"
+                    type="text"
+                    placeholder="Email"
+                     />
+                    <p>Password</p>
+                  
+                    <input placeholder="password"
+                      type="password"
+                      tabindex="1"
+                      required autofocus />
+                  
+                  <div className="Capacha"></div>
+                  <div className="SubmitContainer">
+                    <button onClick={register}>Login</button>
+                    <span>Forget password?</span> 
+                  </div>
+                    
+                  <div className="formFooter">
+                      <p>Already a member? <a href="/login">Login</a></p>
+                  </div>
+                  </form>
+              </div>
+               
+            </div>
+           </div>
         )
 }
 

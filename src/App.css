@@ -1,18 +1,20 @@
 * {
-    margin: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 body {
     overflow-x: hidden;
 }
 
+div {
+    display: block;
+}
+
 .App {
+    margin: 0 auto;
     width: 100%;
-    margin: auto;
-    background-color: rgba(255, 221, 189, 0.507);
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+    background-color: rgb(255, 255, 255);
     position: relative;
 }
 
@@ -28,7 +30,7 @@ body {
 
 body {
     /* Hide scrollbars */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 100;
 }
 
@@ -63,15 +65,11 @@ body {
 /*# sourceMappingURL=scroll_customizing.css.map */
 
 .Footer {
-    height: 10rem;
+    height: 5rem;
     width: 100%;
     background-color: rgb(245, 245, 245);
     bottom: 0;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: top;
-    font-weight: bold;
 }
 
 @media only screen and (width:1000px) {}

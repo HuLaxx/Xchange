@@ -14,11 +14,13 @@ function Cards({PageBehaviour,setToggleState,username}){
                             <img src={cover}></img>
                         </div>
                         <div className="CardNameHolder">
-                            <p>In Offer</p>
                            <h4  >{username}</h4>
                            <h4>Product name</h4>
-                           <button onClick={()=>onButtonClick(true)}>Trade</button>
-                           <button>Buy</button>
+                           <div className="CardButtonHolder">
+                                <button onClick={()=>onButtonClick(true)}>Trade</button>
+                                <button>Buy</button>
+                           </div>
+                           
                         </div> 
                     </div>
                 </div>
