@@ -3,10 +3,12 @@ import Axios from "axios";
 import './Header.css';
 import {Link} from 'react-router-dom';
 import Cards from '../../Body/Cards/Cards';
+import Trade from '../../../Pages/Trade/Trade';
+
 
 export default function Header({toggleState,setToggleState}){
         const [dbCheck, GetDbCheck] = useState([]);
-        
+
         const onButtonClick=(mode)=>{
             setToggleState(mode);
         }
@@ -25,8 +27,8 @@ export default function Header({toggleState,setToggleState}){
                         <ul className="Header">
                                 <li>
                                     <div className="logo">
-                                        <span className="website-name">Eunoia</span>
-                                        <p>{toggleState}</p>
+                                        <span className="website-name">Connectpage</span>
+                                        
                                     </div>
                                 </li>
                         </ul>
@@ -42,6 +44,7 @@ export default function Header({toggleState,setToggleState}){
                                 <p>HOME</p>
                             </li>
                                 </Link>
+
                                 <Link to='/signup' >
                                 <li>
                                     <p>TRADE</p>
@@ -54,9 +57,10 @@ export default function Header({toggleState,setToggleState}){
                                 </Link>
                             </ul>
                             
+                            <Trade toggleState={toggleState} setToggleState={setToggleState}></Trade>
                             {/* Sidepanel have to fix this by CREATING A GLOBAL VARIABLE FOR SIDEBAR active and rest funtion which is created here */}
                              
-                                <div className={toggleState ? 'service-trade-panel active':'service-trade-panel'}>
+                                {/* <div className={toggleState ? 'service-trade-panel active':'service-trade-panel'}>
                                     <div className="service-trade-panel-Header">
                                         <div className="logo" onClick={()=>onButtonClick(false)}>Back</div>
                                             <ul>
@@ -72,8 +76,8 @@ export default function Header({toggleState,setToggleState}){
                                      
                                             </div>            
                                         </div>
-                                    </div>
-                                </div>
-       
+                                </div> */}
+
+            </div>
         );       
 }

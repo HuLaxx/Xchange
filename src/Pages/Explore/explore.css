@@ -141,15 +141,26 @@
 }
 
 .content {
-    width: 1000px;
+    width: 81%;
+    white-space: pre-line;
+    word-wrap: normal;
+    word-break: break-all;
+    display: block;
+    height: auto;
+    line-height: 2;
     margin: 0;
+}
+
+.content p {
+    margin: 0;
+    padding: 10px 0;
 }
 
 .panelHeader {
     width: 100%;
     max-width: 100%;
     grid-area: header;
-    margin: 2% 1%;
+    margin: 2% 2%;
 }
 
 .cardHolder {

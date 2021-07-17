@@ -5,7 +5,6 @@ import Signup from './Pages/Authentication/Signup/signup';
 import {BrowserRouter as Router, Redirect, Route,Switch} from 'react-router-dom';
 import Explore from './Pages/Explore/explore';
 import Error from './Pages/Error/error404';
-import './Pages/sidePanel/sidepanel.css';
 import Profile from './Pages/Profile/Profile';
 import { useLocation } from 'react-router-dom'
 

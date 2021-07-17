@@ -14,7 +14,7 @@ function Explore()  {
         Axios.get('http://localhost:4000/Xc/product').then((Response)=>{
             async function getData(){
                 GetDbCheck(Response.data);
-            }  
+            }
             getData();
         })
     }, [])
@@ -26,7 +26,8 @@ function Explore()  {
                     <News></News>
                 <div className="container">
                     <div className="panelHeader">
-                        <h2>panel header</h2>
+
+                        <h2>Discover book you need</h2>
                         <div className="content">
                             <p>Paragraphs are the building blocks of papers.
                                 Many students define paragraphs in terms of length:
@@ -91,6 +92,12 @@ function Explore()  {
                     <div className="newsAndInterView">
                             <div className="news">
                                 <h5>news and interesting</h5>
+                                <div className="annoncement">
+                                    <p>Connect with the world in different way</p>
+                                </div>
+                                <div className="author">
+                                    <p>Are you author or publisher?</p>
+                                </div>
                             </div>
                     </div>
                 </div>

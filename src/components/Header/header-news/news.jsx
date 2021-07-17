@@ -34,17 +34,11 @@ export class news extends Component {
                             <span className="header-tool__helpService"><Link to="/services">Nagpur</Link></span>
                         </li>
                     </ul>
-
+                    
                     <ul className="Header-tools-tools">
-                       
                             <Link to='/Notification'>
                                 <Button type="button" className="btn btn-primary">
                                         Notifications <span className="badge badge-light">0</span>
-                                </Button>
-                            </Link>
-                            <Link to='/login'>
-                                <Button type="button" className="btn btn-Basecolor">
-                                    <a>Login</a> 
                                 </Button>
                             </Link>
                             <Link to='/signup'>
