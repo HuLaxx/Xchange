@@ -6,9 +6,13 @@ function Cards({PageBehaviour,setToggleState,username}){
     const onButtonClick=(mode)=>{
         setToggleState(mode);
     }
+
+    const onCardClick = ()=>{
+        console.log("card clicked");
+    }
     if(Explore){
         return (
-                <div className="cardContainer">
+                <div className="cardContainer" onClick={onCardClick}>
                     <div className="cardInsider">
                         <div className="cardImage">
                             <img src={cover}></img>

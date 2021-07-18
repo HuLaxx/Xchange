@@ -8,6 +8,8 @@ import Error from './Pages/Error/error404';
 import Profile from './Pages/Profile/Profile';
 import { useLocation } from 'react-router-dom'
 
+// page testing
+import Product from './Pages/Product/product';
 function App() {
   //const location = useLocation();
     return (
@@ -23,6 +25,7 @@ function App() {
             <Route path="/Login" component={Login} />
             <Route path="/signup" component={Signup}/>
             <Route path='/profile' component={Profile} />
+            <Route path='/product' component={Product}/>
             <Redirect to="/Error404" />
           </Switch>
        </Router>

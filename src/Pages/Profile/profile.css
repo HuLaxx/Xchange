@@ -2,7 +2,7 @@
     height: 100%;
     width: 100%;
     position: relative;
-    background-color: rgba(255, 221, 189, 0.507);
+    background-color: #EAEDED;
 }
 
 .username_holder {
@@ -11,16 +11,14 @@
     justify-content: center;
     align-items: center;
     align-content: space-around;
-    height: 10rem;
+    height: auto;
     width: auto;
 }
 
 .square {
-    width: 250px;
-    margin-left: 2ch;
-    margin-right: 2ch;
-    height: 100%;
-    background-color: white;
+    width: 220px;
+    margin: 0 2vh;
+    height: 150px;
 }
 
 .ProfileContainer {
@@ -93,8 +91,7 @@
     margin: 0%;
     z-index: 1;
     height: 900px;
-    width: 20rem;
-    background-color: powderblue;
+    width: 20%;
 }
 
 .item_holder {
@@ -103,14 +100,14 @@
     max-width: 80%;
     margin: 0%;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: space-around;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .AdditemCard {
     width: 250px;
-    height: 400px;
+    height: 350px;
     margin: 10px;
     background-color: rgb(221, 221, 221);
     margin-top: 2px;

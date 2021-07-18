@@ -5,7 +5,7 @@ import Cards from '../../components/Body/Cards/Cards';
 import News from '../../components/Header/header-news/news';
 import Header from '../../components/Header/Nav/Header';
 import Footer from '../footer/footer';
-
+import Notification from '../notification/notification';
 function Explore()  {
     const [toggleState, setToggleState] = useState(false);
     const [dbCheck, GetDbCheck] = useState([]);
@@ -24,6 +24,7 @@ function Explore()  {
             <div className="App">    
                     <Header toggleState={toggleState} setToggleState={setToggleState}></Header>
                     <News></News>
+                    {/* <Notification></Notification> */}
                 <div className="container">
                     <div className="panelHeader">
 

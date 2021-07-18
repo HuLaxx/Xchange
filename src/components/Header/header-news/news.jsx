@@ -47,6 +47,7 @@ export class news extends Component {
                                 </Button>
                             </Link>
                     </ul> 
+                    
                 </div>
            
         )

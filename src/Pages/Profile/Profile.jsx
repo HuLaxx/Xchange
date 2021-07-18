@@ -21,16 +21,13 @@ export default function Profile() {
     {if(userVisit){
         return (
             <div className="App">
-            {/* <Header/> */}
+            <Header/> 
             <div className="ProfileBody">
           
                 <div className="username_holder">
-                <div className="square"></div>
-                        <div className="square"></div>
-    
-                        Banner  
+                        <div className="square"></div>  
                         <div className="square"></div> 
-                         <div className="square"></div>
+                        <div className="square"></div>
                 </div>
                 <div className="ProfileContainer">
                     <div className="menuHolder">
@@ -69,15 +66,13 @@ export default function Profile() {
     }else{
         return (
             <div className="App">
-            {/* <Header/> */}
+            <Header/>
             <div className="ProfileBody">
-          
                 <div className="username_holder">
-                <div className="square"></div>
                         <div className="square"></div>
-                         news 
-                        <div className="square"></div> 
-                         <div className="square"></div>
+                        <div className="square"></div>
+                        <div className="square"></div>  
+                        <div className="square"></div>
                 </div>
                 <div className="ProfileContainer">
                     <div className="menuHolder">
@@ -86,20 +81,19 @@ export default function Profile() {
                         </div>
                         <div className="menu">
                            <ul>
-                               <li>
-                                    Explore
-                               </li>
-                               
-                               <li>
-                                    Blogs
-                               </li>
-                               
-                               <li>
-                                    Explore
-                               </li>
+                        {/* 
+                                                    <li>
+                                                            Blogs
+                                                    </li>
+                                                    
+                                                    <li>
+                                                            Explore
+                                                    </li> */}
                            </ul>
                         </div>
                     </div>
+
+                    {/* Main section starts from here */}
                     <div className="Profile_information">
                         <div className="left_pannel_profile">
     
@@ -117,11 +111,7 @@ export default function Profile() {
                                             <div className="cross"></div>
                                     </div>
                                 </div>
-                            </div>
-                               
-                          
-                           
-                             
+                            </div>  
                         </div>
                     </div>
                 </div>
