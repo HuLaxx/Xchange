@@ -2,13 +2,16 @@
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
-
+const Path = require('path')
 const app = express();
 
 const Q_SELECT_ALL_PRODUCT_QUERY = 'Select * From users';
 const Q_INSERT_NEWUSER = 'Insert into Users(username,password) Values(?,?)';
 const Q_SELECT_USERNAME = 'SELECT * FROM users WHERE username=?';
 const Q_INSERT_NEWITEM = 'Insert into item(productName,Author,requirement,) Values(?,?,?)';
+
+
+const PORT = process.env.PORT || 4001;
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -26,6 +29,12 @@ connection.connect(err => {
 app.use(cors());
 app.use(express.json());
 
+if (process.env.NODE_ENV == 'production') {
+    app.use(express.static('/build'));
+    app.get('*', (req, res) => {
+        res.sendFile(Path.resolve(__dirname, 'build', 'index.html'));
+    });
+}
 app.post('/Xc/registration', (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
@@ -58,7 +67,7 @@ app.get('/Xc/uploadItem', (req, res) => {
             return res.send("SuccessfullyAdded");
         }
     })
-})
+});
 
 app.post('/Xc/login', (req, res) => {
     const username = req.body.username;
@@ -73,7 +82,7 @@ app.post('/Xc/login', (req, res) => {
 
         }
     })
-})
+});
 
 app.get('/Xc/Product', (req, res) => {
     connection.query(Q_SELECT_ALL_PRODUCT_QUERY, (err, result) => {
@@ -87,7 +96,7 @@ app.get('/Xc/Product', (req, res) => {
 
 
 app.listen(4000, () => {
-    console.log("Product server listening on port 4000")
+    console.log("Product server listening on port :", { PORT })
 });
 
 //config app

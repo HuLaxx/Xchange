@@ -1,22 +1,27 @@
 import React,{useState} from 'react'
+import { useParams } from 'react-router-dom';
 import cover from '../../components/Body/Cards/download.jpg';
 import './product.css';
-export default function Product() {
+export default function Product(props) {
     const [xchange, setxchange] = useState(false)
     function openPanel (){
         setxchange(!xchange)
     }
+    // const {handle} = useParams();
+     const { state } = props.location.state;
+     var styleUpdate = state["id"]
     return (
         <div className="productContainer">
             <div className="ProductImage">
                 <div className="imageHolder">
                     <img src={cover}></img>
-                </div>
+                </div>  
             </div>
             <div className="ProductInformation">
                 <div className="ProductTitle">
                     <h4>Name of product</h4>
                     <p>Author</p>
+                    <p>{styleUpdate}</p>
                     <div className="qualityOfProduct">
                         <h5>Quality percent</h5>
                     </div>
@@ -27,7 +32,6 @@ export default function Product() {
                     <div className="Avaliable">
 
                     </div>
-                    
                 </div>
                 <div className="Aboutproduct">
                     <p>Qualcomm Snapdragon 768G 5G processor, 7nm chip and octa-core processor.

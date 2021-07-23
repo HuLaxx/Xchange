@@ -12,7 +12,7 @@
     transition: 0.2s;
 }
 
-.service-trade-panel.active {
+.service-trade-panel.openPanel {
     width: 50%;
     top: 0;
     transition: 250ms;

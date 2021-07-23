@@ -3,12 +3,15 @@ import Axios from "axios";
 import './explore.css'
 import Cards from '../../components/Body/Cards/Cards';
 import News from '../../components/Header/header-news/news';
-import Header from '../../components/Header/Nav/Header';
+import Header from '../../components/Header/Header/Header';
 import Footer from '../footer/footer';
 import Notification from '../notification/notification';
+
+
 function Explore()  {
     const [toggleState, setToggleState] = useState(false);
     const [dbCheck, GetDbCheck] = useState([]);
+    
     
     useEffect(() => {
         Axios.get('http://localhost:4000/Xc/product').then((Response)=>{
@@ -19,15 +22,17 @@ function Explore()  {
         })
     }, [])
 
+
     {if(dbCheck.length > 0){
         return (
             <div className="App">    
                     <Header toggleState={toggleState} setToggleState={setToggleState}></Header>
                     <News></News>
                     {/* <Notification></Notification> */}
-                <div className="container">
-                    <div className="panelHeader">
 
+                <div className="container">
+                    {/* Book description in here */}
+                    <div className="panelHeader">
                         <h2>Discover book you need</h2>
                         <div className="content">
                             <p>Paragraphs are the building blocks of papers.
@@ -49,6 +54,7 @@ function Explore()  {
                            </p>
                         </div>
                     </div>
+                    {/* Tried something different login style in below division In future case to modify */}
                     <div className="MainPanelContainer">
                       {/* <div className="panel">
                         <div className='newAccountBox'>

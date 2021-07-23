@@ -1,22 +1,28 @@
 import React from 'react'
 import './cards.css';
+import { Link, useHistory } from "react-router-dom";
 import cover from './download.jpg';
+import Product from '../../../Pages/Product/product';
+
+
 function Cards({PageBehaviour,setToggleState,username}){
     const Explore = PageBehaviour;
     const onButtonClick=(mode)=>{
         setToggleState(mode);
     }
+        
+    const history = useHistory();
 
-    const onCardClick = ()=>{
-        console.log("card clicked");
-    }
+
     if(Explore){
         return (
-                <div className="cardContainer" onClick={onCardClick}>
+                <div className="cardContainer">
                     <div className="cardInsider">
+                        <Link to={{pathname: '/:product', state: {id: 1, name: 'Ford', color: 'red'}}}>
                         <div className="cardImage">
                             <img src={cover}></img>
                         </div>
+                        </Link>
                         <div className="CardNameHolder">
                            <h4  >{username}</h4>
                            <h4>Product name</h4>

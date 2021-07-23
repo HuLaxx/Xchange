@@ -21,7 +21,6 @@ export default function Header({toggleState,setToggleState}){
             })
         }, [])
 
-    
     return (
             <div className='containerHeader'>
                         <ul className="Header">
@@ -43,7 +42,7 @@ export default function Header({toggleState,setToggleState}){
                             <li>
                                 <p>HOME</p>
                             </li>
-                                </Link>
+                             </Link>
 
                                 <Link to='/signup' >
                                 <li>
@@ -58,26 +57,6 @@ export default function Header({toggleState,setToggleState}){
                             </ul>
                             
                             <Trade toggleState={toggleState} setToggleState={setToggleState}></Trade>
-                            {/* Sidepanel have to fix this by CREATING A GLOBAL VARIABLE FOR SIDEBAR active and rest funtion which is created here */}
-                             
-                                {/* <div className={toggleState ? 'service-trade-panel active':'service-trade-panel'}>
-                                    <div className="service-trade-panel-Header">
-                                        <div className="logo" onClick={()=>onButtonClick(false)}>Back</div>
-                                            <ul>
-                                                <li><button>Trade</button></li>
-                                                <li><button>Offer money</button></li>
-                                            </ul>
-                                        </div>
-                                        <div className="service-trade-panel__container">
-                                            <div className="Container-space">
-                                                {dbCheck.map((val)=>{
-                                                    return(<Cards setToggleState={setToggleState} username={val.username} PageBehaviour={false}></Cards>)  
-                                                })}  
-                                     
-                                            </div>            
-                                        </div>
-                                </div> */}
-
             </div>
         );       
 }

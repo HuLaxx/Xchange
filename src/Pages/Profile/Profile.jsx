@@ -2,7 +2,7 @@ import React,{useState ,useEffect} from 'react'
 import './profile.css'
 import Cards from '../../components/Body/Cards/Cards'
 import Axios from 'axios';
-import Header from '../../components/Header/Nav/Header'
+import Header from '../../components/Header/Header/Header'
 
 export default function Profile() {
 

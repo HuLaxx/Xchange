@@ -21,7 +21,7 @@ export default function Trade({toggleState,setToggleState}) {
 
     return (
             
-            <div className={toggleState ? 'service-trade-panel active':'service-trade-panel'}>
+            <div className={toggleState ? 'service-trade-panel openPanel':'service-trade-panel'}>
                 <div className="service-trade-panel-Header">
                     <div className="logo" onClick={()=>onButtonClick(false)}>Close</div>
                         <ul>

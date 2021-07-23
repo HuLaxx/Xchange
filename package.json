@@ -2,6 +2,14 @@
     "name": "login-form",
     "version": "0.1.0",
     "private": true,
+    "options": {
+        "compression": [
+            "zstd",
+            "snappy",
+            "zlib"
+        ]
+    },
+
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.35",
         "@fortawesome/free-brands-svg-icons": "^5.15.3",
@@ -34,7 +42,8 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "devStart": "nodemon server.js",
-        "dev": "start npm run devStart && start npm run start"
+        "dev": "start npm run devStart && start npm run start",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm build --prefix backend"
     },
     "eslintConfig": {
         "extends": [
