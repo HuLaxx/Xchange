@@ -9,7 +9,6 @@
             "zlib"
         ]
     },
-
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.35",
         "@fortawesome/free-brands-svg-icons": "^5.15.3",
@@ -19,12 +18,14 @@
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
         "axios": "^0.21.1",
+        "body-parser": "^1.19.0",
         "bootstrap": "^4.6.0",
         "cors": "^2.8.5",
         "express": "^4.17.1",
         "firebase": "^8.6.8",
         "gh-pages": "^3.2.0",
         "mongodb": "^3.6.9",
+        "mongoose": "^5.13.3",
         "mysql": "^2.18.1",
         "nodemon": "^2.0.7",
         "path": "^0.12.7",
@@ -41,9 +42,10 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "devStart": "nodemon server.js",
+        "devStart": "nodemon db.js",
         "dev": "start npm run devStart && start npm run start",
-        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm build --prefix backend"
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm build --prefix backend",
+        "server": "nodemon db.js"
     },
     "eslintConfig": {
         "extends": [

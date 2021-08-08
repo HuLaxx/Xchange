@@ -2,16 +2,14 @@ import React,{useState ,useEffect} from 'react';
 import Axios from "axios";
 import './Header.css';
 import {Link} from 'react-router-dom';
-import Cards from '../../Body/Cards/Cards';
 import Trade from '../../../Pages/Trade/Trade';
-
 
 export default function Header({toggleState,setToggleState}){
         const [dbCheck, GetDbCheck] = useState([]);
-
         const onButtonClick=(mode)=>{
             setToggleState(mode);
         }
+
         useEffect(() => {
             Axios.get('http://localhost:4000/Xc/product').then((Response)=>{
                 async function getData(){
@@ -23,19 +21,18 @@ export default function Header({toggleState,setToggleState}){
 
     return (
             <div className='containerHeader'>
-                        <ul className="Header">
-                                <li>
-                                    <div className="logo">
-                                        <span className="website-name">Connectpage</span>
-                                        
-                                    </div>
-                                </li>
-                        </ul>
-                        <ul className="SearchBar_container">
-                            <li>
+                <ul className="Header">
+                    <li>
+                        <div className="logo">
+                            <span className="website-name">Connectpage</span>             
+                        </div>
+                    </li>
+                </ul>
+                <ul className="SearchBar_container">
+                    <li>
                                 {/* <input className="SearchBar" placeholder="Search" ></input><button>S</button> */}
-                            </li>
-                        </ul>
+                     </li>
+                </ul>
                        
                         <ul className="nav link">
                             <Link to='/'>
