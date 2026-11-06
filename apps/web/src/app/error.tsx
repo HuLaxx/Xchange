@@ -1,0 +1,2 @@
+"use client";
+export default function ErrorPage({reset}:{error:Error&{digest?:string};reset:()=>void}){return <main className="simple-page"><div className="eyebrow">UNEXPECTED ERROR</div><h1>Something went <em>wrong.</em></h1><p>Please try again. If the database is not configured, see the setup guide in the repository.</p><button className="primary-btn" onClick={reset}>Try again ↗</button></main>}
