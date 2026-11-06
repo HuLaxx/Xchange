@@ -1,3 +1,5 @@
+> **Live local-first app:** [Xchange Campus](https://hulax-xchange-campus.vercel.app) · Vercel production deployment is READY. User-entered records stay in this browser, not a shared database.
+
 # Xchange — Pass the story on
 
 This is a functioning campus book-exchange application, not only a project description. The new self-contained version lives in `site/` and the original React/Express implementation remains intact for reference.
