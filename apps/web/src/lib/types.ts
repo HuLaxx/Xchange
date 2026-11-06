@@ -29,3 +29,5 @@ export type BookRequest = {
   note:string;
   created_at:string;
 };
+
+export type BookMessage = {id:string;request_id:string;sender_id:string;body:string;created_at:string};

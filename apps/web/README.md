@@ -9,12 +9,12 @@ A mobile-responsive, online-ready platform for **buying, selling and swapping ph
 - Public browse/search/filter/sort and individual listing details.
 - Supabase Auth (email/password), seller profiles, and cookie-based SSR sessions.
 - Protected listing creation with optional cover photo (up to 5 MB).
-- Purchase and exchange **requests** (not checkouts), seller accept/decline with atomic book reservation.
+- Purchase and exchange **requests** (not checkouts), seller accept/decline with atomic book reservation, and private conversations after acceptance.
 - My Library dashboard, saved books, owner-only listing management.
 - PostgreSQL with row-level security, seller-ownership enforcement, and a private requests table.
 - Graceful *preview mode* without database environment variables; examples are **not** real sellers.
 
-**Not yet implemented:** in-app payments, shipping label generation / tracking, buyer-seller messaging, moderation, dispute resolution, refunds, seller verification, notifications, and production anti-abuse controls. Do not accept payments based only on the alpha.
+**Not yet implemented:** in-app payments, shipping label generation / tracking, push/email chat notifications, moderation, dispute resolution, refunds, seller verification, notifications, and production anti-abuse controls. Do not accept payments based only on the alpha.
 
 ## Run locally
 
@@ -30,7 +30,7 @@ Open http://localhost:3000. Without credentials, pages display safe mock books. 
 ## Activate shared data and authentication
 
 1. Create a Supabase project in the intended deployment region.
-2. Run `supabase/migrations/0001_marketplace.sql` and then `0002_transaction_integrity.sql` in Supabase SQL Editor (repository root).
+2. Run `supabase/migrations/0001_marketplace.sql` then `0002_transaction_integrity.sql`, and then `0003_private_conversations.sql` in Supabase SQL Editor (repository root).
 3. Set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` in `apps/web/.env.local`. The key must be the **publishable/anon key**, never the service-role key.
 4. In Supabase Auth URL Configuration, set Site URL to your deployed host and add `https://YOUR_HOST/auth/callback` plus `http://localhost:3000/auth/callback` to redirect URLs.
 5. Enable email confirmations and a trustworthy email delivery provider before production.
@@ -44,7 +44,7 @@ The existing `site/` static app and its existing Vercel project are intentionall
 ```
 apps/web/
   src/app/                App Router pages and authenticated server actions
-  src/components/         Shared visual components and forms
+  src/components/         Shared visual components, authenticated forms, and chat
   src/lib/                Catalog and typed domain models
   src/lib/supabase/       Browser + server Supabase clients
   src/proxy.ts            SSR session refresh
@@ -53,7 +53,7 @@ supabase/migrations/      PostgreSQL schema, RLS, transaction RPCs
 ```
 
 - The server validates user identity with Supabase Auth on every mutation; PostgreSQL RLS protects records if a user bypasses the UI.
-- A purchase request reserves a listing only after the seller accepts. An accepted swap reserves **both** listings atomically.
+- A purchase request reserves a listing only after the seller accepts; an accepted request unlocks participant-only messaging. An accepted swap reserves **both** listings atomically.
 - Requests are *intent messages* only. Never claim that accepting a request charged money or dispatched a courier.
 - The first public catalog is capped at 60 latest books; add cursor pagination and database search indexes before growth.
 - **Launch gate:** review RLS, add request rate-limiting, anti-spam, moderation, reliable payment/shipping workflow, audit logs, privacy policy and terms.

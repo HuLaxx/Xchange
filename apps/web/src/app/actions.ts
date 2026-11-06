@@ -108,3 +108,15 @@ export async function signOutAction():Promise<void> {
  if(isConfigured()) {const db=await createClient();await db.auth.signOut();}
  redirect("/");
 }
+
+export async function sendMessageAction(_prev:ActionState,form:FormData):Promise<ActionState> {
+ const session=await reader();
+ if(!session) return errorState("Sign in to send messages.");
+ const id=String(form.get("request_id")??"");
+ const body=String(form.get("body")??"").trim();
+ if(!uuid.safeParse(id).success||body.length<1||body.length>1200) return errorState("Write a message of up to 1,200 characters.");
+ const {error}=await session.db.from("messages").insert({request_id:id,sender_id:session.user.id,body});
+ if(error) return errorState("Message could not be sent. Only participants can message after a request is accepted.");
+ revalidatePath("/messages/"+id);
+ return {error:"",success:"Message sent."};
+}
