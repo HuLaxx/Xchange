@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import{samples,validate,filterBooks}from'../site/model.mjs';
+test('category and price sort',()=>{assert.equal(filterBooks(samples,{category:'Engineering'}).length,2);const v=filterBooks(samples,{sort:'low'});assert.ok(v[0].price<=v[1].price)});
+test('validates price and title',()=>{assert.throws(()=>validate({...samples[0],price:-1}),/Price/);assert.throws(()=>validate({...samples[0],title:'a'}),/Title/)})
